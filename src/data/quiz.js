@@ -40,3 +40,4 @@ const quizData = [
         answerIndex: 0
     },
 ];
+export default quizData;
