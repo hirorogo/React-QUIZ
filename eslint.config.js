@@ -39,3 +39,4 @@ export default [
     },
   },
 ]
+export default QuizData
