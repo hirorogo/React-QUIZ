@@ -6,7 +6,7 @@ const quizData = [
     },
     {
         question: " 愛知総合工科高等学校の校訓は？",
-        options: ["夢志（ゆめ）実現、　輝かせ　知・技・心", "挑戦・創造・協力", "知識・技術・誠実"],
+        options: ["夢志（ゆめ）実現、 輝かせ 知・技・心", "挑戦・創造・協力", "知識・技術・誠実"],
         answerIndex: 0
     },
     {
@@ -30,7 +30,7 @@ const quizData = [
         answerIndex: 0
     },
     {
-        question: "愛知総合工科高等学校の工科にでてくる略称は？",
+        question: "愛知総合工科高等学校の校歌にでてくる略称は？",
         options: ["愛工", "愛総工", "愛知工科"],
         answerIndex: 0
     },
@@ -40,3 +40,4 @@ const quizData = [
         answerIndex: 0
     },
 ];
+export default quizData;

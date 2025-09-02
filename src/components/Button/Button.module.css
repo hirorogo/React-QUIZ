@@ -1,0 +1,9 @@
+.button{
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: brown;
+    margin: 10px;   
+}
+.buttonInner{
+    color: rgb(0, 0, 0);
+}
