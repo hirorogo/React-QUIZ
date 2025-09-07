@@ -1,14 +1,32 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Display from "../components/Display/Display";
 import quizData from "../data/quiz";
 import Button from "../components/Button/Button";
-import { useNavigation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Quizpage() {
   const [quizIndex, setQuizIndex] = useState(0);
   const [answerLogs, setAnswerLogs] = useState([]);
-  const nabigation = useNavigation();
+  const navigation = useNavigate();
   const MAX_QUIZ_LEN = quizData.length;
+
+  useEffect(() => {
+    const correctNum = answerLogs.filter((answer) => answer === true);
+    if (quizIndex === MAX_QUIZ_LEN) {
+      navigation("/result", {
+        state: {
+          maxQuizLen: MAX_QUIZ_LEN,
+          correctNumLen: correctNum.length,
+        },
+      });
+    }
+  }, [quizIndex, MAX_QUIZ_LEN, answerLogs, navigation]);
+
+  // クイズが終わったら何も表示しない
+  if (quizIndex >= MAX_QUIZ_LEN) {
+    return null;
+  }
+
   const quiz = quizData[quizIndex];
   const handleClick = (clickedIndex) => {
     if (clickedIndex === quiz.answerIndex) {
