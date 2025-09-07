@@ -1,7 +1,7 @@
 .button{
     font-size: 20px;
     padding: 10px 20px;
-    background-color: brown;
+    background-color: #87ceeb; /* 水色 */
     margin: 10px;   
 }
 .buttonInner{
